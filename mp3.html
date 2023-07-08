@@ -288,7 +288,7 @@
       <div class="player p30 p-relative">
         <span class="version p-absolute">Ver 1.0</span>
         <span class="title p-absolute">EasyMP3播放器</span>
-        <div class="ml10 mr10 flash playing-name">{{music?.name}}</div>
+        <div class="ml10 mr10  playing-name" :class="{'flash': isPlaying}">{{music?.name}}</div>
         <audio id="audio" :src="music?.url" autoplay controls @ended="next"></audio>
         <div class="d-flex">
           <span class="btn" @click="prev">{{btn.prev}}</span>
